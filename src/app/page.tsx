@@ -38,7 +38,7 @@ export default function Home() {
             <p className="mt-2 text-muted-foreground">Select a theme to generate a quote.</p>
           </div>
           <div className="flex flex-col gap-4">
-            <Select value={theme} onValueChange={setTheme} className="w-full">
+            <Select value={theme} onValueChange={setTheme}>
               <SelectTrigger>
                 <SelectValue placeholder="Select a theme" />
               </SelectTrigger>
