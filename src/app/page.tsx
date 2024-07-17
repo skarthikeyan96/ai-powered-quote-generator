@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function Home() {
   const [theme, setTheme] = useState("inspirational")
   const [quote, setQuote] = useState("")
-  const site = process.env.origin;
+  const site = process.env.NEXT_PUBLIC_ORIGIN;
 
   const handleSubmit = () => {
     const fetchQuote = async () => {
