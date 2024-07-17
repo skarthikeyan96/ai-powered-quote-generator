@@ -9,11 +9,11 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function Home() {
   const [theme, setTheme] = useState("inspirational")
   const [quote, setQuote] = useState("")
- 
+  const site = process.env.origin;
 
   const handleSubmit = () => {
     const fetchQuote = async () => {
-      const response = await fetch(`http://localhost:3001/api/quote?query=${theme}`)
+      const response = await fetch(`${site}/api/quote?query=${theme}`)
       const data = await response.json()
       console.log(data)
       setQuote(data.response)
